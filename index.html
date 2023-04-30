@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic AI</title>   
+    <meta name="description" content="">	    
+    <meta charset="UTF-8" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">    
+    
+    <!-- Some styles to be applied to the body and iframe tags to remove any margin, padding, or border and set the iframe to fill the entire viewport. -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+        }
+    </style>
+    
+    <!-- Script to resize the iframe based on the window size. -->
+    <script>
+        function resizeIframe() {
+            var iframe = document.getElementById("iframe");
+            iframe.style.width = window.innerWidth + "px";
+            iframe.style.height = window.innerHeight + "px";
+        }
+        window.onresize = resizeIframe;
+    </script>
+</head>
+
+<!-- Call the resizeIframe function when the page is loaded. -->
+<body onload="resizeIframe()">
+    <main>
+        <iframe id="iframe"
+            src="https://ora.sh/embed/50f229c4-7211-4811-a9e5-2b7827ee15a0">
+        </iframe>
+    </main>
+</body>
+
+</html>
